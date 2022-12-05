@@ -1,0 +1,27 @@
+/venv
+__pycache__
+/metakey_data/_pyacache_
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/dashboard/node_modules
+/dashboard/pnp
+/dashboard/pnp.js
+
+# testing
+/dashboard/coverage
+
+# production
+/dashboard/build
+
+# misc
+/dashboard/.DS_Store
+/dashboard/.env.local
+/dashboard/.env.development.local
+/dashboard/.env.test.local
+/dashboard/.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
