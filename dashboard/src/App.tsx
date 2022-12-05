@@ -8,7 +8,7 @@ function App() {
   const [metakey_list, setMetakeyList] = useState([]);
   const[status, setSatus] = useState('initial');
   useEffect(() => {
-    fetch('http://127.0.0.1:5000/api').then(res => res.json())
+    fetch('https://serene-plains-58099.herokuapp.com/api').then(res => res.json())
     .then(data => {
       console.log(data);
       setSatus('OK')

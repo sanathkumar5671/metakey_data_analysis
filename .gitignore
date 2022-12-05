@@ -13,7 +13,7 @@ __pycache__
 /dashboard/coverage
 
 # production
-/dashboard/build
+# /dashboard/build
 
 # misc
 /dashboard/.DS_Store
