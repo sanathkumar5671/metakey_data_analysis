@@ -8,7 +8,7 @@ import {
   Legend,
 } from "recharts";
 
-// Reference: This design of ReCharts library was taken from https://recharts.org/en-US/examples/SimpleBarChart
+// Reference: This design of ReCharts library was taken from https://recharts.org/en-US/examples/
 /**
  * This functional component is responsible to display the Unique Holding Wallets Bar Chart. 
  * The data is formatted at the backend to match the charts parameters. as shown in the reference above.

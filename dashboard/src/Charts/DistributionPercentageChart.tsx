@@ -8,7 +8,7 @@ import {
   Tooltip,
   Legend,
 } from "recharts";
-// Reference: This design of ReCharts library was taken from https://recharts.org/en-US/examples/BiaxialBarChart
+// Reference: This design of ReCharts library was taken from https://recharts.org/en-US/examples/
 /**
  * This functional component is responsible for displaying the distribution percentage Histogram chart.
  * The Bar chart of Recharts is modified in such a way that it can be used as a Histogram chart. Please refer to
