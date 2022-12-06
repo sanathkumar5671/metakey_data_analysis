@@ -45,10 +45,58 @@ Please view the CSV file here https://github.com/sanathkumar5671/metakey_data_an
         - Distribution Percentage for each Metakey Edition (HISTOGRAM CHART): displaying the distribution percentage for each 
           metakey edition.
   
-  to display these graphs the data is requested from a FLASK RESTful API endpoint.
+    to display these graphs the data is requested from a FLASK RESTful API endpoint.
 
-  * APP.tsx is the main component which renders the chart components in the Charts directory.
+     * APP.tsx is the main component which renders the chart components in the Charts directory.
 
-  Note: The front-end also handles minimum errors, one such is by displaying an "INTERNAL SERVER ERROR" message when the API endpoint is unavailable.
+     Note: The front-end also handles minimum errors, one such is by displaying an "INTERNAL SERVER ERROR" message when the API endpoint is unavailable.
 
+<h2>UNIT TEST</h2>
+
+Initial Steps to start RUN unit tests:
+
+STEP 1: Create a new python environment to run this project locally.
+STEP 2: run command `pip install -r requirements.txt` 
+STEP 3: cd Dashboard
+STEP 4: run `npm install` to install TypeScript libraries and its dependencies.
+
+<h3>Backend Unit Test</h3>
+FILE NAME: backend_unit_testing/metakey_testing.py
+
+Use Cases Considered:
+
+1. Check if each function in the metakey/read_data.py Metakey class are returning a valid list of data. The valid values are inserted manually, as the data set is really small.
+
+2. Check if error is handled for each function in the metakey/read_data.py Metakey class, if the column does not exist the functions should return an an empty list `[]`. 
+
+Only these two cases are considered for now, however there are many other cases which can be considered. As we can see in backend_unit_testing/metakey_testing.py these cases have already produced 6 different functions.
+
+TO RUN this unit test file, `python -m unittest -v backend_unit_testing/metakey_testing.py` is used. The below diagram is the passed tests screenshot
+
+<p align="center">
+  <img src="https://github.com/sanathkumar5671/metakey_data_analysis/blob/main/images/backend_unit_test_results.png" />
+</p>
+
+<h3>Frontend Unit Test</h3>
+
+FILE Location: dashboard/src/App.test.tsx
+
+Use Cases considered:
+
+1. Check if each heading of the graph is present and check if the all the three charts are present
+
+2. Check if the "INTERNAL SERVER ERROR" is displayed when the api endpoint is not available.
+
+TO RUN this unit test, please following the below steps:
+
+STEP 5: After completing the initial STEPS mentioned above, GO TO STEP 6 below.
+STEP 6: Run `flask run` in the root directory of the project
+STEP 7: Open another terminal and `cd dashboard`
+STEP 8: run `npm test`
+
+The below is the screenshot to pass all the tests:
+
+<p align="center">
+  <img src="https://github.com/sanathkumar5671/metakey_data_analysis/blob/main/images/dashboard_unit_test_results.png" />
+</p>
 
