@@ -56,8 +56,11 @@ Please view the CSV file here https://github.com/sanathkumar5671/metakey_data_an
 Initial Steps to start RUN unit tests:
 
 STEP 1: Create a new python environment to run this project locally.
+
 STEP 2: run command `pip install -r requirements.txt` 
+
 STEP 3: cd Dashboard
+
 STEP 4: run `npm install` to install TypeScript libraries and its dependencies.
 
 <h3>Backend Unit Test</h3>
@@ -90,8 +93,11 @@ Use Cases considered:
 TO RUN this unit test, please following the below steps:
 
 STEP 5: After completing the initial STEPS mentioned above, GO TO STEP 6 below.
+
 STEP 6: Run `flask run` in the root directory of the project
+
 STEP 7: Open another terminal and `cd dashboard`
+
 STEP 8: run `npm test`
 
 The below is the screenshot to pass all the tests:
