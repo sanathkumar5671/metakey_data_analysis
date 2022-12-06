@@ -1,6 +1,13 @@
 import React, { useCallback, useState } from "react";
 import { PieChart, Pie, Sector } from "recharts";
-
+// Reference: This desgin of ReCharts library was taken from https://recharts.org/en-US/examples/CustomActiveShapePieChart
+/**
+ * This is a helper function which helps to desgin the pie chart in a better way by handeling the size of each element and
+ * it helps the users to interact with the chart better. For example when the different elements of the chart are clicked on 
+ * this function displays message for each element such as the percentage and name of the metakey edition.
+ * @param props any
+ * @returns Sector HTML element
+ */
 const renderActiveShape = (props: any) => {
   const RADIAN = Math.PI / 180;
   const {
@@ -14,7 +21,7 @@ const renderActiveShape = (props: any) => {
     fill,
     payload,
     percent,
-    value
+    value,
   } = props;
   const sin = Math.sin(-RADIAN * midAngle);
   const cos = Math.cos(-RADIAN * midAngle);
@@ -73,11 +80,15 @@ const renderActiveShape = (props: any) => {
     </g>
   );
 };
-
-export default function UniqueHoldingWalletsChart(props:any) {
+/**
+ * This is the function component which uses the Recharts library to display pie chart of the Unique Holders percentage
+ * @param metakey_data dict of metakey data in the format -> {'uniqueHoldersPercentage':[{name: Edition 1, value:10%}]}
+ * @returns PieChart HTML element
+ */
+export default function UniqueHolderPercentageChart(metakey_data: any) {
   const [activeIndex, setActiveIndex] = useState(0);
   const onPieEnter = useCallback(
-    (_:any, index:any) => {
+    (_: any, index: any) => {
       setActiveIndex(index);
     },
     [setActiveIndex]
@@ -88,7 +99,7 @@ export default function UniqueHoldingWalletsChart(props:any) {
       <Pie
         activeIndex={activeIndex}
         activeShape={renderActiveShape}
-        data={props['unique_holders_percentage']}
+        data={metakey_data["unique_holders_percentage"]}
         cx={400}
         cy={150}
         innerRadius={60}
