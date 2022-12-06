@@ -8,10 +8,10 @@ import {
   Legend,
 } from "recharts";
 
-// Reference: This desgin of ReCharts library was taken from https://recharts.org/en-US/examples/SimpleBarChart
+// Reference: This design of ReCharts library was taken from https://recharts.org/en-US/examples/SimpleBarChart
 /**
  * This functional component is responsible to display the Unique Holding Wallets Bar Chart. 
- * The data is formatted at the backend to match the charts paraments. as shown in the reference above.
+ * The data is formatted at the backend to match the charts parameters. as shown in the reference above.
  * @param metakey_data dict of metakey data in the format -> {'uniqueHoldersPercentage':[{name: Edition 1, value:10%}]}
  * @returns BarChart HTML element
  */

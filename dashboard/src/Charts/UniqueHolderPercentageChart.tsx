@@ -1,8 +1,8 @@
 import React, { useCallback, useState } from "react";
 import { PieChart, Pie, Sector } from "recharts";
-// Reference: This desgin of ReCharts library was taken from https://recharts.org/en-US/examples/CustomActiveShapePieChart
+// Reference: This design of ReCharts library was taken from https://recharts.org/en-US/examples/CustomActiveShapePieChart
 /**
- * This is a helper function which helps to desgin the pie chart in a better way by handeling the size of each element and
+ * This is a helper function which helps to design the pie chart in a better way by handling the size of each element and
  * it helps the users to interact with the chart better. For example when the different elements of the chart are clicked on 
  * this function displays message for each element such as the percentage and name of the metakey edition.
  * @param props any
